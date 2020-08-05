@@ -1,7 +1,22 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/authapp", { useNewUrlParser: true });
+
+// mongoose.connect("mongodb://localhost/authapp", { useNewUrlParser: true });
+mongoose
+  .connect(
+    "mongodb+srv://mayankbisht:8475079607@cluster0.c4prl.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+    }
+  )
+  .then(() => {
+    console.log("Connected to DB");
+  })
+  .catch((err) => {
+    console.log("ERROR:", err.message);
+  });
 
 app.use(
   require("express-session")({
