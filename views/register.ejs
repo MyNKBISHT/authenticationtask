@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 700px;" class="login-dark">
+      <form action="/register" method="post">
+        <h2 class="sr-only">Login Form</h2>
+        <div class="illustration">
+          <i class="icon ion-ios-locked-outline"></i>
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            placeholder="Username"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group">
+          <strong>SELECT TYPES:</strong>
+          <div class="form-check">
+            <input type="radio" name="type" id="radio1" value="A" checked />
+            <label class="form-check-label" for="radio1">
+              A
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="type" id="radio2" value="B" />
+            <label class="form-check-label" for="radio2">
+              B
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="type" id="radio3" value="C" />
+            <label class="form-check-label" for="radio3">
+              C
+            </label>
+          </div>
+          <!-- <input type="radio" name="type" value="A" /> Type A
+          <input type="radio" name="type" value="B" /> Type B
+          <input type="radio" name="type" value="C" /> Type C -->
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Sign Up
+          </button>
+          <button class="btn btn-primary btn-block">
+            <a style="text-decoration: none;" href="/login">Login</a>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
