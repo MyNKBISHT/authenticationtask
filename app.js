@@ -5,10 +5,11 @@ const mongoose = require("mongoose");
 // mongoose.connect("mongodb://localhost/authapp", { useNewUrlParser: true });
 mongoose
   .connect(
-    "mongodb+srv://mayankbisht:8475079607@cluster0.c4prl.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongodb+srv://mayankbisht:8475079607@cluster0.c4prl.mongodb.net/cluster0?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useCreateIndex: true,
+      useUnifiedTopology: true,
     }
   )
   .then(() => {
